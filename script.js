@@ -1,0 +1,7 @@
+const container = document.querySelector("#container")
+let el1 = document.createElement("div")
+el1.classList.add("box")
+container.appendChild(el1)
+container.appendChild(document.createElement("div",{class:"box"}))
+container.appendChild(document.createElement("div",{class:"box"}))
+container.appendChild(document.createElement("div",{class:"box"}))
