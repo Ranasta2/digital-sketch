@@ -1,7 +1,13 @@
-const container = document.querySelector("#container")
-let el1 = document.createElement("div")
-el1.classList.add("box")
-container.appendChild(el1)
-container.appendChild(document.createElement("div",{class:"box"}))
-container.appendChild(document.createElement("div",{class:"box"}))
-container.appendChild(document.createElement("div",{class:"box"}))
+const numBoxes = 16;
+
+const container = document.querySelector("#container");
+
+for (let i = 0; i < numBoxes; i++){
+    let el = document.createElement("div")
+    el.classList.add("box")
+    el.addEventListener("mouseover",() => {
+        el.classList.toggle('selected')} )
+    container.appendChild(el)
+}
+
+//box will same dimensions, but squares inside will change depending on #
