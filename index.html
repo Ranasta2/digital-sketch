@@ -6,31 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Sketch</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
         <h1>Welcome!</h1>
     </header>
     <main id="main-content">
+        <button id="reset-btn">Reset</button>
+        <button id="test-btn">Add</button>
+        <button id="test-btn2">Resize</button>
         <div class="slidecontainer">
             <label>
                 # of Grid Squares
-                <input type="range" id="slider" name="grid" list="num-boxes">
+                <input type="range" id="slider" name="grid" min="1" max="32" value="16">
             </label>
-            <datalist id="num-boxes">
-                <option value="1"></option>
-                <option value="4"></option>
-                <option value="9"></option>
-                <option value="16"></option>
-                <option value="25"></option>
-                <option value="36"></option>
-                <option value="49"></option>
-                <option value="64"></option>
-                <option value="81"></option>
-                <option value="100"></option>
-                <option value="121"></option>
-            </datalist>
+            <p>Value: <output id="grid-value"></output></p>
         </div>
         <div id="container">
         </div>
@@ -38,6 +29,6 @@
     <footer>
         <small>Copyright &copy; 2023 Ryan Anastasia</small>
     </footer>
-<script src="script.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
